@@ -1,0 +1,591 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Fresh Cuts Barbershop</title>
+    <style>
+        html {
+    scroll-behavior: smooth;
+}
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #111111;
+        color: white;
+        line-height: 1.6;
+    }
+
+    header {
+        background-color: #1c1c1c;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    header h1 {
+        color: #d4af37;
+        font-size: 36px;
+        margin-bottom: 5px;
+    }
+
+    nav {
+        background-color: #d4af37;
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav a {
+        color: #111111;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+    }
+
+    section {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    #services div {
+        background-color: #222222;
+        margin: 15px auto;
+        padding: 20px;
+        max-width: 400px;
+        border-radius: 10px;
+    }
+
+    #services h3 {
+        color: #d4af37;
+    }
+
+    #contact a,
+    #home a {
+        display: inline-block;
+        background-color: #d4af37;
+        color: #111111;
+        padding: 12px 22px;
+        margin-top: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    footer {
+        background-color: #1c1c1c;
+        text-align: center;
+        padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+        nav a {
+            display: inline-block;
+            margin: 5px 8px;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+    }
+    .hero {
+    padding: 100px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #111111, #292015);
+}
+
+.tagline {
+    color: #d4af37;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero-description {
+    max-width: 550px;
+    margin: 0 auto 25px;
+    color: #cccccc;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: #d4af37;
+    color: #111111;
+    padding: 14px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-button:hover {
+    background-color: #f0d477;
+}
+
+@media (max-width: 600px) {
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .hero {
+        padding: 70px 20px;
+    }
+}
+.services-section {
+    padding: 70px 20px;
+    text-align: center;
+    background-color: #181818;
+}
+
+.services-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.services-intro {
+    color: #cccccc;
+    margin-bottom: 35px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background-color: #242424;
+    border: 1px solid #3a3a3a;
+    border-radius: 12px;
+    padding: 30px 20px;
+    width: 250px;
+    box-sizing: border-box;
+    transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    color: #d4af37;
+}
+
+.service-card p {
+    color: #cccccc;
+    line-height: 1.7;
+}
+
+.service-card h4 {
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.service-card.featured {
+    border: 2px solid #d4af37;
+}
+
+@media (max-width: 600px) {
+    .service-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+.booking-section {
+    padding: 70px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #242424, #111111);
+}
+
+.booking-section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.booking-section p {
+    color: #cccccc;
+    margin-bottom: 25px;
+}
+
+.booking-button {
+    display: inline-block;
+    background-color: #d4af37;
+    color: #111111;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.booking-button:hover {
+    background-color: #ffffff;
+    transform: translateY(-3px);
+}
+@media (max-width: 600px) {
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .booking-section h2 {
+        font-size: 26px;
+    }
+}
+.about-section {
+    padding: 80px 20px;
+    background-color: #202020;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.about-content p:not(.tagline) {
+    color: #cccccc;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-content .booking-button {
+    margin-top: 10px;
+}
+.gallery-section {
+    padding: 70px 20px;
+    text-align: center;
+    background-color: #111111;
+}
+
+.gallery-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.gallery-intro {
+    color: #cccccc;
+    margin-bottom: 35px;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.gallery-card {
+    background-color: #242424;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-card h3 {
+    color: #d4af37;
+    padding: 10px;
+}
+.contact-section {
+    padding: 70px 20px;
+    text-align: center;
+    background-color: #181818;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.contact-section > p:not(.tagline) {
+    color: #cccccc;
+    margin-bottom: 35px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background-color: #242424;
+    border: 1px solid #3a3a3a;
+    border-radius: 10px;
+    padding: 25px 20px;
+    width: 280px;
+    box-sizing: border-box;
+}
+
+.contact-card h3 {
+    color: #d4af37;
+}
+
+.contact-card p {
+    color: #cccccc;
+    line-height: 1.7;
+}
+.site-footer {
+    background-color: #080808;
+    padding: 40px 20px 20px;
+    text-align: center;
+    border-top: 2px solid #d4af37;
+}
+
+.site-footer h3 {
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.site-footer h3 span {
+    color: #d4af37;
+}
+
+.site-footer > p {
+    color: #cccccc;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: #d4af37;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.site-footer .copyright {
+    border-top: 1px solid #333333;
+    padding-top: 20px;
+    margin-top: 30px;
+    font-size: 13px;
+}
+</style>
+</head>
+<body><header>
+    <h1 id="main-heading"></h1>Fresh Cuts Barbershop</h1>
+    <p>Look Sharp. Feel Confident.</p>
+</header>
+
+<nav aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#booking">Book Now</a>
+    <a href="#gallery">Gallery</a>
+</nav>
+
+<section id="home" class="hero">
+    <p class="tagline">YOUR STYLE. YOUR STATEMENT.</p>
+
+    <h2>LOOK SHARP.<br>FEEL CONFIDENT.</h2>
+
+    <p class="hero-description">
+        Experience quality haircuts, clean fades and professional grooming
+        at Fresh Cuts Barbershop.
+    </p>
+
+    <a class="hero-button"
+       href="https://wa.me/254180843375?text=Hello%2C%20I%20would%20like%20to%20book%20a%20haircut."
+       target="_blank"
+       rel="noopener noreferrer">
+        BOOK YOUR CUT
+    </a>
+</section>
+
+<section id="services" class="services-section">
+    <p class="tagline">WHAT WE OFFER</p>
+    <h2>OUR SERVICES</h2>
+    <p class="services-intro">
+        Quality grooming. Clean finishes. Affordable prices.
+    </p>
+
+    <div class="services-container">
+
+        <div class="service-card">
+            <h3>Classic Haircut</h3>
+            <p>A clean, stylish haircut for everyday confidence.</p>
+            <h4>KSh 300</h4>
+        </div>
+
+        <div class="service-card featured">
+            <h3>Skin Fade</h3>
+            <p>A sharp fade with a smooth, professional finish.</p>
+            <h4>KSh 500</h4>
+        </div>
+
+        <div class="service-card">
+            <h3>Beard Trim</h3>
+            <p>A neat beard trim to complete your look.</p>
+            <h4>KSh 200</h4>
+        </div>
+
+    </div>
+</section>
+    <h2>Our Services</h2>
+
+    <div>
+        <h3>Classic Haircut</h3>
+        <p>KSh 300</p>
+    </div>
+
+    <div>
+        <h3>Skin Fade</h3>
+        <p>KSh 500</p>
+    </div>
+
+    <div>
+        <h3>Beard Trim</h3>
+        <p>KSh 200</p>
+    </div>
+<section id="about" class="about-section">
+    <div class="about-content">
+        <p class="tagline">MORE THAN JUST A HAIRCUT</p>
+
+        <h2>ABOUT FRESH CUTS</h2>
+
+        <p>
+            At Fresh Cuts Barbershop, we believe every client deserves
+            to look sharp and feel confident. Our goal is to provide
+            quality grooming, friendly service, and fresh styles
+            in a comfortable environment.
+        </p>
+
+        <p>
+            Whether you need a classic haircut, a clean skin fade,
+            or a neat beard trim, we're here to help you look your best.
+        </p>
+
+        <a href="#booking" class="booking-button">
+            BOOK YOUR VISIT
+        </a>
+    </div>
+</section>
+<section id="gallery" class="gallery-section">
+    <p class="tagline">OUR WORK</p>
+    <h2>FRESH CUTS GALLERY</h2>
+    <p class="gallery-intro">
+        Clean cuts. Sharp fades. Fresh styles.
+    </p>
+
+    <div class="gallery-container">
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80"
+                 alt="Barbershop interior">
+            <h3>Our Barbershop</h3>
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=600&q=80"
+                 alt="Professional barber at work">
+            <h3>Professional Grooming</h3>
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&q=80"
+                 alt="Barber styling a haircut">
+            <h3>Fresh Styles</h3>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <p class="tagline">GET IN TOUCH</p>
+    <h2>CONTACT US</h2>
+    <p>Ready for a fresh look? We'd love to hear from you.</p>
+
+    <div class="contact-details">
+        <div class="contact-card">
+            <h3>📍 Location</h3>
+            <p>Enter the barbershop's location here</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>🕒 Opening Hours</h3>
+            <p>Monday – Saturday</p>
+            <p>8:00 AM – 8:00 PM</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>📱 WhatsApp</h3>
+            <p>Chat with us to book your appointment.</p>
+            <a href="https://wa.me/254180843375"
+               class="booking-button"
+               target="_blank">
+                CHAT WITH US
+            </a>
+        </div>
+    </div>
+</section>
+<section id="booking" class="booking-section">
+    <p class="tagline">READY FOR A FRESH LOOK?</p>
+    <h2>BOOK YOUR APPOINTMENT</h2>
+    <p>Get in touch with us today and reserve your spot.</p>
+
+    <a href="https://wa.me/254180843375"
+       class="booking-button"
+       onclick="return confirmBooking()">BOOK YOUR CUT</a>
+    </a>
+</section>
+<footer class="site-footer">
+    <h3>FRESH CUTS <span>BARBERSHOP</span></h3>
+
+    <p>Your style. Your statement.</p>
+
+    <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#booking">Book Now</a>
+    </div>
+
+    <p class="copyright">
+        &copy; 2026 Fresh Cuts Barbershop. All rights reserved.
+    </p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
